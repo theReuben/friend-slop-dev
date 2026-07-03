@@ -23,7 +23,11 @@ Must define, concretely:
 - **Palette:** exactly 12–20 named colors (hex), typically as one small palette
   atlas texture that most meshes UV into. Include: 1 sky/fog family, 2–3
   environment families, 1 high-saturation player/interactive accent family.
-  Interactive = saturated is a readability law, not a suggestion.
+  Interactive = saturated is a readability law, not a suggestion — and the
+  accent must survive a deuteranopia/protanopia simulation (free sim tools /
+  Krita filters): differ from the environment in LUMINANCE, not hue alone.
+  ~8% of the male-skewed audience is colorblind; an accent that vanishes for
+  them fails the readability law, slop-check verifies it.
 - **Shape language:** one sentence (e.g. "chunky, rounded, slightly inflated —
   nothing has a sharp corner"). Every sourced asset is measured against it.
 - **Proportion rule** for characters (e.g. 3-heads-tall, big hands — big hands

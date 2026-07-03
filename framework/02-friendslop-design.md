@@ -63,6 +63,11 @@ that don't produce a funny failure image.
 - ≤ 5 player verbs. Every verb must interact with physics or other players.
 - No inventory/crafting/skill trees unless they ARE the novel mechanic.
 - No narrative beyond ambient worldbuilding + one tone-setting intro screen.
+- **Near-zero text by design.** Goals, stakes, and feedback communicated
+  through physics, icons, and color — if a mechanic needs a paragraph, it
+  fails the couch-legibility pillar anyway. Deliberate consequence: the game
+  is effectively language-neutral, we ship English-only UI (~50 strings) and
+  never build a localization system (scope trap; log requests to backlog).
 - No enemies with pathfinding unless the design doc justifies why hazards and
   physics can't create the pressure instead (AI enemies are a scope trap).
 - Systems over content: prefer 1 recombining hazard system to 10 bespoke levels.

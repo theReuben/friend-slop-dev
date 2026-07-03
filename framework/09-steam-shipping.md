@@ -69,6 +69,19 @@ higher (the 4-pack impulse math is the business model). Launch discount 10–20%
 No regional price overrides beyond Steam's auto-suggestions. Never free —
 free attracts a support burden that violates ship-and-forget.
 
+## If it blows up (the good emergency)
+
+Ship-and-forget is a floor, not a cage. If a game finds real traction
+(sustained top-seller placement, six-figure units), the USER may extend the
+patch window — but three rules hold even then: never publicly promise a
+roadmap (silence preserves options; promises create the support burden we
+exist to avoid), price stays put (no greedy mid-spike increases; goodwill IS
+the marketing), and a sequel/expansion is a NEW game through Phase 0 like any
+other — success does not exempt it from the novelty check against its own
+predecessor. Store-page-only localization (short description in top store
+languages) is the one cheap post-hoc growth lever worth taking; in-game stays
+English/near-zero-text per framework/02.
+
 ## Post-launch window (2 weeks, then stop — manifesto rule)
 
 - Days 1–3: watch reviews + discussions twice daily; hotfix S1s same-day.

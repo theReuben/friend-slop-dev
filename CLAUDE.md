@@ -13,6 +13,7 @@ one step forward through the pipeline.
 | "find assets for X" | Run the `asset-hunt` skill (delegates to `asset-scout`) |
 | "does this look like AI slop?" / visual review | Run the `slop-check` skill |
 | "are we ready to ship?" / release | Run the `ship-check` skill |
+| "prepare the launch" / marketing | Run the `launch-kit` skill (Phase 5, L−14) |
 | Anything about a game in production | Read `games/<name>/PRODUCTION_LOG.md` first, then act as the **producer** agent (`.claude/agents/producer.md`) |
 | Changing the factory itself | Edit `framework/` docs directly; keep them prescriptive and short |
 

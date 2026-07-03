@@ -57,6 +57,9 @@ never a vibe. A failed slop-check blocks its gate.
       still identifiable.
 - [ ] A random mid-action frame reads as an intentional composition (focal
       hierarchy exists).
+- [ ] Colorblind pass: under a deuteranopia simulation (or grayscale as the
+      cheap proxy), interactables still separate from environment by
+      luminance. Accent that survives only by hue = FAIL (framework/06).
 
 ## Output
 

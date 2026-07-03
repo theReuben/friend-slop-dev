@@ -28,7 +28,8 @@ attempt and impossible to achieve if these basics are missed.
 - Default open-mic proximity voice (with easy opt-out) — the comedy transmits
   by default.
 
-## The streamer kit (steam-publisher builds at L−14)
+## The streamer kit (steam-publisher builds at L−14 — automated end-to-end
+by the `launch-kit` skill; the human only sends and posts)
 
 A public press-kit page (free: GitHub Pages or itch devlog) containing:
 - 5 curated playtest clips (the funniest fails, with audio), vertical crops too.

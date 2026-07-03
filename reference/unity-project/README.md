@@ -45,7 +45,9 @@ the game's PRODUCTION_LOG and never change them mid-project.
 6. **Scenes**: create `Boot`, `MainMenu`, `Game` in `_Project/Levels/`; add
    all to Build Settings in that order.
 7. **Commit** the pristine project as the first commit of the game repo, and
-   record editor version + all package versions in the PRODUCTION_LOG.
+   **push to a private remote the same day** (GitHub private repo) — the dev
+   machine dying must never cost more than a day's work. Record editor
+   version + all package versions + the remote URL in the PRODUCTION_LOG.
 
 ## Sanity check (do this before any gameplay work)
 
