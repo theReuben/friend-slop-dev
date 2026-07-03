@@ -1,0 +1,9 @@
+# Tooling for working on this repo WITHOUT Unity/Blender installed.
+# Needs the Python version the bpy wheel targets (3.11 for bpy 4.x/5.x):
+#   python3 -m venv .venv && .venv/bin/pip install -r reference/requirements.txt
+#
+# bpy               -> run/verify the Blender pipeline (reference/blender/selftest.py)
+# tree-sitter*      -> syntax-check C# edits (reference/unity/syntax_check.py)
+bpy
+tree-sitter
+tree-sitter-c-sharp

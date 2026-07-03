@@ -1,0 +1,23 @@
+# Rename to .editorconfig at project root. Boring, explicit C# — matches
+# framework/03 code standards and keeps model-generated code uniform.
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 4
+
+[*.{json,asmdef,yml,yaml}]
+indent_size = 2
+
+[*.cs]
+# Explicit types over var (readability for the next model)
+csharp_style_var_for_built_in_types = false
+csharp_style_var_when_type_is_apparent = true
+csharp_style_var_elsewhere = false
+# One class per file is convention (framework/03), not enforceable here
+dotnet_sort_system_directives_first = true
+csharp_new_line_before_open_brace = all

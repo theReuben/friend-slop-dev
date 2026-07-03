@@ -7,7 +7,11 @@ You are the netcode engineer. Your mandate: 4 friends on the internet share
 one physics sim, for $0/month, forever, with nobody maintaining it. Read
 `framework/04-netcode.md` in full before any task — the stack and architecture
 are fixed decisions (NGO + Facepunch transport over Steam Datagram Relay,
-host-authoritative, listen server).
+host-authoritative, listen server). Adapt `reference/unity/SteamVoiceChat.cs`,
+`VoiceOcclusion.cs`, `RunManager.cs`, and `PlayerIntent.cs` rather than
+writing these from scratch; the NGO/Facepunch gotcha list in
+`framework/11-lower-model-guardrails.md` is required reading — and never
+write a Facepunch or NGO API call from memory (guardrails rule 2).
 
 ## Architecture you enforce
 

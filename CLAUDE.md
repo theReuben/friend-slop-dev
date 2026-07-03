@@ -39,9 +39,21 @@ one step forward through the pipeline.
 
 ## Where things are
 
-- Doctrine and playbooks: `framework/00-manifesto.md` through `framework/10-virality.md`.
-  Read `00`, `01`, and `02` before doing any design work. Read the topic doc
-  before doing specialist work (e.g. `04-netcode.md` before touching networking).
+- Doctrine and playbooks: `framework/00-manifesto.md` through `framework/11-lower-model-guardrails.md`.
+  Read `00`, `01`, and `02` before doing any design work; read `11` before any
+  engineering work (it lists the known gotchas and the stuck protocol). Read
+  the topic doc before doing specialist work (e.g. `04-netcode.md` before
+  touching networking).
+- Canonical code: `reference/unity/` (character motor, grabbing, ragdoll,
+  voice chat, impact audio, run manager, tests) and `reference/blender/`
+  (palette-atlas unification pipeline). **Adapt these — never rewrite these
+  systems from scratch.** Feel tunables start from
+  `reference/unity/TUNING_DEFAULTS.md`, never from a guess.
+- Pre-vetted game pitches: `games/CONCEPT_BANK.md` (re-verify novelty against
+  the live market before using one — the file ages).
+- What good output looks like: `games/_worked-example/` — a filled-in design
+  doc, production log, credits file, and agent reports at target quality.
+  Imitate its form when filling any template; it is NOT a produced game.
 - Specialist agents: `.claude/agents/`. Delegate to them for their domains rather
   than doing everything inline — each one carries its domain's checklist.
 - Per-game state: `games/<name>/`. `PRODUCTION_LOG.md` is the single source of
