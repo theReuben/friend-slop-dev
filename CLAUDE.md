@@ -39,11 +39,13 @@ one step forward through the pipeline.
 
 ## Where things are
 
-- Doctrine and playbooks: `framework/00-manifesto.md` through `framework/12-testing.md`.
+- Doctrine and playbooks: `framework/00-manifesto.md` through `framework/13-human-playbook.md`.
   Read `00`, `01`, and `02` before doing any design work; read `11` (gotchas,
   stuck protocol) and `12` (testing levels + run commands) before any
   engineering work. Read the topic doc before doing specialist work (e.g.
-  `04-netcode.md` before touching networking).
+  `04-netcode.md` before touching networking). When queuing work for the
+  human, `13-human-playbook.md` defines what they do and what YOU must have
+  prepared first.
 - Canonical code: `reference/unity/` (character motor, grabbing, ragdoll,
   voice chat, impact audio, run manager, tests) and `reference/blender/`
   (palette-atlas unification pipeline). **Adapt these — never rewrite these
