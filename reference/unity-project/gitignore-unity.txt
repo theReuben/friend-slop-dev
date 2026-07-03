@@ -1,0 +1,30 @@
+# Unity — standard ignore set (rename to .gitignore at project root)
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+
+# IDE
+.idea/
+.vs/
+.vscode/
+*.csproj
+*.sln
+*.user
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Never ship / never commit
+steam_appid.txt
+*.pyc
+__pycache__/
+
+# Keep .meta files ALWAYS (Unity references break without them)
+!*.meta

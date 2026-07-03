@@ -116,6 +116,10 @@ setup, editor tooling beyond one day's payoff, package upgrades mid-project.
   mark objects non-static during iteration and bake at gates.
 
 ### Blender → Unity
+- No Blender installed / cloud session → `pip install bpy` (standalone wheel,
+  Python version must match the wheel's) gives the full headless pipeline.
+  ALWAYS run `reference/blender/selftest.py` after any Blender/bpy version
+  change — it proves the pipeline or names what drifted.
 - Model imports 100× too big/small → FBX unit scale; export with
   `apply_scale_options='FBX_SCALE_ALL'` (the unify script does).
 - Model rotated −89.98° → axis mismatch; export `axis_forward='-Z',

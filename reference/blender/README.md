@@ -2,13 +2,20 @@
 
 These scripts implement the anti-kitbash pass from `framework/06-art-direction.md`:
 one palette atlas per game, every asset remapped onto it, so five packs read as
-one authored style. They run headless — no Blender UI needed — which means the
-tech-artist agent can execute them on any machine with Blender installed (4.x).
+one authored style. They run fully headless.
 
-⚠ Written without a Blender install to test against (this repo was authored in
-a cloud session). The bpy API here targets Blender 4.x and the logic is sound,
-but expect to fix small API drift on first run — run on ONE test asset first,
-open the result in Blender/Unity, verify scale/orientation/UVs, THEN batch.
+✅ **Verified end-to-end on Blender 5.0.1** (headless, in a cloud container):
+multi-material test asset → nearest-palette UV routing (exact cell centers,
+correct color→cell mapping) → single M_Palette material → decimation → flat
+shading surviving the FBX round-trip. Run `selftest.py` to re-prove the
+pipeline on YOUR Blender version before batching real assets — it exits
+nonzero with named failures if the API drifted.
+
+**No Blender install required**: the standalone wheel works anywhere —
+`pip install bpy` (needs the Python version the wheel targets; 3.11 for
+bpy 4.x/5.x) then `python selftest.py`. This means the tech-artist agent can
+run the entire unification pipeline in a cloud session; only the silhouette
+hand-edits need Blender's UI on a real machine.
 
 ## 1. Make the game's palette atlas (once per game, at Gate 0)
 

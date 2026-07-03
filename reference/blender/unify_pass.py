@@ -32,8 +32,10 @@ IMPORTERS = {
 
 
 def material_base_color(mat):
-    """Best-effort base color of a source material (nodes, then viewport)."""
-    if mat and mat.use_nodes:
+    """Best-effort base color of a source material (nodes, then viewport).
+    Reads node_tree directly — Material.use_nodes is deprecated in Blender 5,
+    removed in 6."""
+    if mat and getattr(mat, "node_tree", None):
         for node in mat.node_tree.nodes:
             if node.type == "BSDF_PRINCIPLED":
                 c = node.inputs["Base Color"].default_value
@@ -60,7 +62,8 @@ def cell_center_uv(idx, cols):
 
 def make_palette_material(palette_path):
     mat = bpy.data.materials.new("M_Palette")
-    mat.use_nodes = True
+    if hasattr(mat, "use_nodes") and not mat.use_nodes:  # pre-6.0 compat; 5.x warns, 6.x removes
+        mat.use_nodes = True
     bsdf = next(n for n in mat.node_tree.nodes if n.type == "BSDF_PRINCIPLED")
     tex = mat.node_tree.nodes.new("ShaderNodeTexImage")
     tex.image = bpy.data.images.load(palette_path)
@@ -98,17 +101,8 @@ def process_object(obj, palette_mat, cols, args):
     obj.scale = [s * args.scale for s in obj.scale]
 
 
-def main():
-    argv = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else []
-    p = argparse.ArgumentParser()
-    p.add_argument("--in", dest="src", required=True)
-    p.add_argument("--out", dest="dst", required=True)
-    p.add_argument("--palette", required=True)
-    p.add_argument("--scale", type=float, default=1.0)
-    p.add_argument("--decimate", type=float, default=1.0)
-    p.add_argument("--shading", choices=["flat", "smooth"], default="flat")
-    args = p.parse_args(argv)
-
+def run(args):
+    """args needs: src, dst, palette, scale, decimate, shading (see main)."""
     src, dst = pathlib.Path(args.src), pathlib.Path(args.dst)
     dst.mkdir(parents=True, exist_ok=True)
     cols = math.ceil(math.sqrt(len(PALETTE)))
@@ -139,4 +133,17 @@ def main():
     print("unify_pass done. Now do the human 20%: silhouette edits in the UI.")
 
 
-main()
+def main():
+    argv = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else []
+    p = argparse.ArgumentParser()
+    p.add_argument("--in", dest="src", required=True)
+    p.add_argument("--out", dest="dst", required=True)
+    p.add_argument("--palette", required=True)
+    p.add_argument("--scale", type=float, default=1.0)
+    p.add_argument("--decimate", type=float, default=1.0)
+    p.add_argument("--shading", choices=["flat", "smooth"], default="flat")
+    run(p.parse_args(argv))
+
+
+if __name__ == "__main__":
+    main()

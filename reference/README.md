@@ -15,9 +15,11 @@ the game's, wire the serialized fields, and re-verify third-party API calls.
    mid-2026 but the source of truth is `Library/PackageCache/<package>/` and
    the shipped XML docs in the project. If a call doesn't compile, read the
    real signature there — do not guess an alternative from memory.
-3. **These files have never been compiled in this repo.** There is no Unity
-   here. Expect to fix small things (a using, a renamed enum) on first import;
-   that is normal and fine. What should NOT change is the architecture.
+3. **Verification status differs by folder.** `blender/` is PROVEN — executed
+   end-to-end headless (see its README and `selftest.py`). `unity/*.cs` has
+   never been compiled (no Unity in the authoring environment): expect to fix
+   small things (a using, a renamed enum) on first import; that is normal and
+   fine. What should NOT change is the architecture.
 4. Start values for every tunable live in `unity/TUNING_DEFAULTS.md` — put
    them in the `*Config` ScriptableObjects, then tune one value at a time
    (log in the production log's tuning table).
@@ -40,7 +42,8 @@ the game's, wire the serialized fields, and re-verify third-party API calls.
 | `unity/Tests/SmokeTest.cs` | The PlayMode smoke test skeleton |
 | `unity/GradientSkybox.shader` | Palette gradient sky (kills slop tell #1) |
 | `unity/TUNING_DEFAULTS.md` | Starting values for every feel tunable |
-| `blender/` | Headless bpy pipeline: palette atlas + asset unification pass |
+| `unity-project/` | New-project scaffold kit: setup procedure, .gitignore, .editorconfig, asmdefs, folder-tree generator |
+| `blender/` | Headless bpy pipeline: palette atlas + asset unification pass — **verified end-to-end on Blender 5.0** (`selftest.py` re-proves it on any version; `pip install bpy` runs it anywhere, no Blender install) |
 
 ## Where files go in the Unity project
 

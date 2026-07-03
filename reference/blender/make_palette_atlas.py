@@ -31,12 +31,7 @@ def hex_to_rgb(h):
     return tuple(int(h[i:i + 2], 16) / 255.0 for i in (0, 2, 4))
 
 
-def main():
-    argv = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else []
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--out", required=True)
-    args = parser.parse_args(argv)
-
+def build(out_path):
     cols = math.ceil(math.sqrt(len(PALETTE)))
     rows = math.ceil(len(PALETTE) / cols)
     width, height = cols * CELL_PX, rows * CELL_PX
@@ -53,13 +48,21 @@ def main():
                 pixels[o:o + 4] = (r, g, b, 1.0)
 
     img.pixels[:] = pixels
-    img.filepath_raw = args.out
+    img.filepath_raw = out_path
     img.file_format = "PNG"
     img.save()
 
-    print(f"palette atlas: {args.out} ({cols}x{rows} cells, {len(PALETTE)} colors)")
+    print(f"palette atlas: {out_path} ({cols}x{rows} cells, {len(PALETTE)} colors)")
     for idx, (name, hexcode) in enumerate(PALETTE):
         print(f"  cell {idx:2d}: {name} #{hexcode}")
 
 
-main()
+def main():
+    argv = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else []
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--out", required=True)
+    build(parser.parse_args(argv).out)
+
+
+if __name__ == "__main__":  # guard: unify_pass.py + selftest.py import from this file
+    main()

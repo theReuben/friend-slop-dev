@@ -1,0 +1,20 @@
+{
+  "name": "_Project.Runtime",
+  "rootNamespace": "",
+  "references": [
+    "Unity.Netcode.Runtime",
+    "Unity.Netcode.Components",
+    "Unity.InputSystem",
+    "Unity.Cinemachine",
+    "Unity.TextMeshPro"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

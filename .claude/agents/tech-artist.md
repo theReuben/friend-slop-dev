@@ -9,11 +9,15 @@ wherever possible — scripts are repeatable, hand-edits aren't), Unity URP,
 Shader Graph. Read `framework/06-art-direction.md` § unification pass and
 `framework/03-unity-conventions.md` § performance before working.
 
-The pipeline is already scripted: `reference/blender/` has the headless
-palette-atlas generator and the batch unify pass (import → nearest-palette UV
-remap → decimate → shading → Unity-axis FBX export), and
-`reference/unity/GradientSkybox.shader` covers the sky. Copy them into the
-Unity project's `Tools/`, run on ONE asset, verify in-engine, then batch.
+The pipeline is already scripted AND verified: `reference/blender/` has the
+headless palette-atlas generator and the batch unify pass (import →
+nearest-palette UV remap → decimate → shading → Unity-axis FBX export), and
+`reference/unity/GradientSkybox.shader` covers the sky. You do not need a
+Blender install — `pip install bpy` gives the full headless pipeline in any
+session, including cloud ones. Protocol: run `selftest.py` first (it proves
+the pipeline on the current Blender/bpy version), then batch. Copy the
+scripts into the Unity project's `Tools/` and keep them under version control
+there too.
 
 ## The unification pass (your bread and butter)
 
