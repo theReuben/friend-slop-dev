@@ -4,6 +4,11 @@ One folder per game. `_template/` is the scaffold the `new-game` skill copies �
 never work in it directly, and never delete a shipped game's folder (post-
 mortems are the factory's memory; the novelty check reads them).
 
+`_worked-example/` is a filled-in reference (BIG FLOAT, simulated Gate 0–2)
+showing what good output looks like — imitate its form when filling templates,
+EXCLUDE it from theme-distinctness checks, and note BIG FLOAT remains
+available in `CONCEPT_BANK.md`.
+
 Each game folder contains:
 
 - `GAME_DESIGN.md` — the one-page living spec (pitch, verbs, style bible).

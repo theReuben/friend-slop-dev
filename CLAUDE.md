@@ -51,6 +51,9 @@ one step forward through the pipeline.
   `reference/unity/TUNING_DEFAULTS.md`, never from a guess.
 - Pre-vetted game pitches: `games/CONCEPT_BANK.md` (re-verify novelty against
   the live market before using one — the file ages).
+- What good output looks like: `games/_worked-example/` — a filled-in design
+  doc, production log, credits file, and agent reports at target quality.
+  Imitate its form when filling any template; it is NOT a produced game.
 - Specialist agents: `.claude/agents/`. Delegate to them for their domains rather
   than doing everything inline — each one carries its domain's checklist.
 - Per-game state: `games/<name>/`. `PRODUCTION_LOG.md` is the single source of

@@ -10,7 +10,9 @@ description: Start a new friendslop game — runs concept generation, novelty ch
 1. **Load context.** Read `framework/00-manifesto.md`, `framework/01-pipeline.md`,
    `framework/02-friendslop-design.md`, and skim every existing
    `games/*/GAME_DESIGN.md` + post-mortems in their production logs (theme
-   distinctness and "what did we learn" both feed the new pitch).
+   distinctness and "what did we learn" both feed the new pitch). Skip
+   `games/_template/` and `games/_worked-example/` for distinctness — the
+   worked example is a form reference, not a produced game.
 2. **Market snapshot.** Web-search the current friendslop landscape: Steam
    tags Online Co-Op + Physics + Funny (recent top sellers + new releases),
    plus "viral co-op game" for the last 6 months. List the mechanics already

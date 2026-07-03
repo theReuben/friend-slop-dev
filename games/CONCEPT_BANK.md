@@ -60,6 +60,8 @@ when used or invalidated, with a dated note.
   scaling per TUNING_DEFAULTS); level design must demand varied formations.
 
 ## 4. BIG FLOAT (working) — parade balloon escort
+*(Used as the form reference in `games/_worked-example/` — still AVAILABLE to
+build for real; re-run Gate 0 fresh if picked.)*
 - **Logline:** Four handlers walk a colossal helium balloon through town on
   ropes, in wind, under bridges, past everything sharp.
 - **THE CLIP:** Gust lifts the lightest player off the ground; the other three

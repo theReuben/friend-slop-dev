@@ -16,10 +16,11 @@ the game's, wire the serialized fields, and re-verify third-party API calls.
    the shipped XML docs in the project. If a call doesn't compile, read the
    real signature there — do not guess an alternative from memory.
 3. **Verification status differs by folder.** `blender/` is PROVEN — executed
-   end-to-end headless (see its README and `selftest.py`). `unity/*.cs` has
-   never been compiled (no Unity in the authoring environment): expect to fix
-   small things (a using, a renamed enum) on first import; that is normal and
-   fine. What should NOT change is the architecture.
+   end-to-end headless (see its README and `selftest.py`). `unity/*.cs` is
+   SYNTAX-VERIFIED (every file parses clean — `unity/syntax_check.py`, re-run
+   it after ANY .cs edit here) but never compiled against Unity: expect to fix
+   small semantic things (a using, a renamed enum) on first import; that is
+   normal and fine. What should NOT change is the architecture.
 4. Start values for every tunable live in `unity/TUNING_DEFAULTS.md` — put
    them in the `*Config` ScriptableObjects, then tune one value at a time
    (log in the production log's tuning table).
@@ -41,6 +42,7 @@ the game's, wire the serialized fields, and re-verify third-party API calls.
 | `unity/Editor/StaticSweep.cs` | Missing-script / missing-reference scanner (QA static sweep) |
 | `unity/Tests/SmokeTest.cs` | The PlayMode smoke test skeleton |
 | `unity/GradientSkybox.shader` | Palette gradient sky (kills slop tell #1) |
+| `unity/syntax_check.py` | tree-sitter C# parse check — the compile-adjacent verification available without Unity |
 | `unity/TUNING_DEFAULTS.md` | Starting values for every feel tunable |
 | `unity-project/` | New-project scaffold kit: setup procedure, .gitignore, .editorconfig, asmdefs, folder-tree generator |
 | `blender/` | Headless bpy pipeline: palette atlas + asset unification pass — **verified end-to-end on Blender 5.0** (`selftest.py` re-proves it on any version; `pip install bpy` runs it anywhere, no Blender install) |

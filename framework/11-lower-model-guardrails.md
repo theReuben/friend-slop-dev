@@ -44,6 +44,9 @@ either.
   test output, a log line, a screenshot, a profiler number.
 - The smoke test and static sweep (`reference/unity/Tests/`, `Editor/`) exist
   so you can verify without a human. Run them before claiming anything works.
+- Editing C# with no Unity available (e.g. in this repo's `reference/`)?
+  `reference/unity/syntax_check.py` is the compile-adjacent check — run it
+  after every .cs edit. Editing the Blender scripts? `reference/blender/selftest.py`.
 
 ## Rule 5 — The stuck protocol
 

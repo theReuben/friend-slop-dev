@@ -17,6 +17,10 @@ certain way from memory.
    then the rest of the approved list).
 2. For each candidate, verify ON THE SOURCE PAGE: author, license (exact text,
    not the site's summary badge), download availability. Record the URL.
+   Known gotcha: some asset sites (kenney.nl among them) 403 automated
+   fetchers — fall back to corroborating sources via web search, record WHICH
+   evidence you used, and flag the row for human confirmation at download
+   time. Never skip recording because the fetch failed.
 3. AI filter: reject AI-generated or AI-suspect assets (flooded incoherent
    galleries, artifact tells, AI tags). Use platform AI-content filters where
    they exist (Sketchfab, itch). CC0 does not launder AI output — reject on
