@@ -75,6 +75,54 @@ setup, editor tooling beyond one day's payoff, package upgrades mid-project.
 
 ## Known gotchas (hard-won; check here before debugging)
 
+### You are an agent editing a Unity project through the filesystem
+This is the gotcha class most likely to hurt you, because file editing is your
+default mode and Unity is not a normal codebase — the editor keeps its own
+asset database keyed by the GUIDs in `.meta` files.
+
+- **Never move, rename, or delete an asset file on disk.** The orphaned
+  `.meta` (or the freshly generated one) changes the GUID and silently breaks
+  every scene/prefab reference to it. Move assets via an editor script
+  (`AssetDatabase.MoveAsset`) or hand the human a numbered list. Moving a
+  file WITH its `.meta` in the same operation is acceptable for pure-code
+  files, but prefer the editor path.
+- **Creating a new `.cs` file is safe** (Unity generates the `.meta`). Commit
+  the generated `.meta` in the same commit as the file, never separately.
+- **Do not hand-edit `.unity`, `.prefab`, or `.asset` YAML** beyond trivially
+  changing a serialized number you can already see. Structural scene changes
+  (adding objects, wiring references) go through editor scripts or the human.
+  You cannot resolve merge conflicts in scene YAML; avoid them existing:
+  prefab-heavy scenes, one owner per scene file per work session.
+- **Compile errors block EVERYTHING.** While any script fails to compile,
+  PlayMode, tests, and all editor menus (including Static Sweep) are dead.
+  If the editor "won't run tests", check compile state first — fix compilation
+  before diagnosing anything else. First action of any engineering session:
+  confirm the project compiles.
+- **Headless Unity CLI:** `-batchmode -nographics -quit -logFile <path>` for
+  builds/sweeps (read the logFile, not stdout — Unity barely uses stdout).
+  EXCEPTION: `-runTests` must NOT be combined with `-quit` (it self-exits and
+  `-quit` corrupts the run); results land in the XML at `-testResults <path>`.
+  Only one Unity process can hold a project open — a headless run while the
+  human has the editor open fails on the project lock.
+- **After editing code on disk while the human's editor is open**, the editor
+  recompiles on focus. Harmless, but tell the human to expect it, and never
+  edit during their Play Mode session (domain reload eats their test run).
+- Renaming a serialized field in C# silently wipes its values in every scene/
+  prefab — use `[FormerlySerializedAs("oldName")]` for one release, then clean.
+
+### Unity editor & project
+- New Input System active (our default) = old `Input.GetKey/GetAxis` APIs
+  throw or return nothing. Never mix; if sample code uses `Input.*`, port it.
+- Raycasts hit the caster's own collider → exclude the player layer in the
+  mask (the reference motor's `groundMask` comment is load-bearing).
+- `DontDestroyOnLoad` managers duplicate when you re-enter the Boot scene
+  (menu → game → menu). Guard with an explicit "already exists" check — this
+  is the classic source of double audio and double event firing.
+- `OnValidate` runs on import and in edit mode — no side effects in it beyond
+  cheap null-warnings, or batch imports crawl.
+- Prefab-instance overrides: editing a prefab INSTANCE in a scene changes only
+  that scene. If a fix should apply everywhere, open the prefab asset itself.
+
 ### Unity physics
 - Joint chains stretch/explode → raise solver iterations (8/2), check mass
   ratios ≤ 10:1 per link, never scale transforms of jointed bodies.
@@ -87,8 +135,16 @@ setup, editor tooling beyond one day's payoff, package upgrades mid-project.
   a constraint.
 
 ### Netcode for GameObjects
+- **Spawning fails with a cryptic hash/handler error** → the prefab isn't
+  registered in the NetworkManager's NetworkPrefabs list. EVERY networked
+  prefab must be registered; this is the #1 NGO time-sink for newcomers.
+  Corollary: `Instantiate()` alone is invisible to clients — server-side
+  `Instantiate()` + `GetComponent<NetworkObject>().Spawn()`.
 - `NetworkVariable` writes silently ignored → written by a non-server; wrap
   every mutation in `if (!IsServer) return;`.
+- NetworkManager is DontDestroyOnLoad → returning to the menu scene spawns a
+  second one; guard like any Boot manager, and call `Shutdown()` before
+  loading the menu after a session.
 - RPC method names MUST end in `ServerRpc`/`ClientRpc` — the codegen enforces
   it and errors are cryptic.
 - Values read as default/null on clients → read before spawn; subscribe in
@@ -108,6 +164,11 @@ setup, editor tooling beyond one day's payoff, package upgrades mid-project.
 - Two clients on one machine won't work with one Steam account — real
   transport tests need two accounts/machines; use the local transport toggle
   for solo iteration.
+- Call `SteamClient.Shutdown()` on application quit and leave the lobby on
+  session end — zombie lobbies confuse the friends-list join flow for hours.
+- Build uploads (`steamcmd`) prompt for Steam Guard MFA — that's a human step
+  by design; prepare the depot/app VDF scripts so their session is one login
+  + one command.
 
 ### URP / rendering
 - Post volume does nothing → camera's "Post Processing" checkbox off, or
