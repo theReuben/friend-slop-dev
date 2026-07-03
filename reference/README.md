@@ -34,7 +34,7 @@ the game's, wire the serialized fields, and re-verify third-party API calls.
 | `unity/GrabSystem.cs` | ConfigurableJoint grabbing/carrying with break forces |
 | `unity/RagdollBlender.cs` | Impact → ragdoll → comedic recovery |
 | `unity/SquashStretch.cs` | Scale-punch charm on impacts/jumps |
-| `unity/ImpactAudioSystem.cs` | All collision audio through one tunable system |
+| `unity/ImpactAudioSystem.cs` + `ImpactAudioConfig.cs` + `ImpactAudioEmitter.cs` | All collision audio through one tunable system (one class per file — Unity requires MonoBehaviour/ScriptableObject names to match their file) |
 | `unity/FallSilence.cs` | The signature fall-silence beat |
 | `unity/SteamVoiceChat.cs` | Proximity voice over Facepunch + NGO (the fiddliest file — read its header) |
 | `unity/VoiceOcclusion.cs` | Raycast low-pass on voice |

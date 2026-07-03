@@ -67,9 +67,10 @@ namespace Friendslop.Reference
                 captureStream.SetLength(0);
                 int compressed = Steamworks.SteamUser.ReadVoiceData(captureStream);
                 if (compressed <= 0) continue;
-                IsTalking = true;
+                lastPacketTime = Time.time;
                 SendVoiceServerRpc(captureStream.ToArray());     // small packets, ~20 ms cadence
             }
+            IsTalking = Time.time - lastPacketTime < 0.3f;       // decays to false when the mic goes quiet
         }
 
         private static bool PushToTalkHeld() =>

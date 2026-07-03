@@ -57,7 +57,7 @@
 - 06-01 — Gate 0 passed: parade balloon escort, logline approved by user
 - 06-04..06 — greybox: rope fallback used (3-joint chain, verlet deferred — scope risk #1 resolved)
 - 06-08 — **Gate 1 PASSED**: funny metric 9 laughs / 62 min across 3 sessions, cause split: lifts 4, group-drag 3, anchor snap 2. Report in REPORTS.md
-- 06-12 — NGO conversion: intents over RPC, host-auth (per reference/PlayerIntent.cs pattern), 1 day as predicted
+- 06-12 — NGO conversion: intents over RPC, host-auth (per reference/unity/PlayerIntent.cs pattern), 1 day as predicted
 - 06-15 — S1 host-quit bug fixed; failure matrix row verified
 - 06-16 — Steam lobby + voice working on two real accounts
 - 06-17 — balloon hero prop scratch-built (Blender, 2,900 tris, palette cells 12–15)

@@ -55,14 +55,14 @@ namespace Friendslop.Reference
         private void HoverSpring()
         {
             float rayLength = config.rideHeight + config.probeExtra;
-            Grounded = Physics.Raycast(body.position, Vector3.down, out RaycastHit hit, rayLength,
-                                       groundMask, QueryTriggerInteraction.Ignore)
-                       && hit.distance <= config.rideHeight + 0.15f;
-
-            if (!Physics.Raycast(body.position, Vector3.down, out hit, rayLength, groundMask,
-                                 QueryTriggerInteraction.Ignore))
+            if (!Physics.Raycast(body.position, Vector3.down, out RaycastHit hit, rayLength,
+                                 groundMask, QueryTriggerInteraction.Ignore))
+            {
+                Grounded = false;
                 return;
+            }
 
+            Grounded = hit.distance <= config.rideHeight + 0.15f;
             GroundNormal = hit.normal;
             if (Grounded) lastGroundedTime = Time.time;
 
