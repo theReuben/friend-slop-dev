@@ -44,6 +44,8 @@ tech-artist, audio-designer.
 
 - Real netcode: Steam lobbies, join via friends list, proximity voice, 4 players
   over the internet (`04-netcode.md`).
+- **Short-form engine starts** (Gate 1 footage exists): steam-publisher mines
+  playtest recordings into 2–3 posts/week, running through launch (`10-virality.md`).
 - One level/area at target art quality: sourced assets unified in Blender,
   lighting pass, post-processing, UI style (`06-art-direction.md`).
 - Core loop closed: start → play → fail/win → results → play again.

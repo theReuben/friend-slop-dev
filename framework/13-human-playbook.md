@@ -20,6 +20,7 @@ the pipeline stalls until you do them.
 | 4 | Claude Code on the dev machine, opened in a workspace containing this repo + (later) the Unity project | 15 min | Cloud sessions work for design/sourcing/Blender phases; engineering needs the local install |
 | 5 | Python tooling for the verification scripts: `python3 -m venv .venv && .venv/bin/pip install -r reference/requirements.txt` | 5 min | Python 3.11 (the bpy wheel's version) |
 | 6 | Line up your test resources: a second Steam account (family member / free account), ideally a second machine, and 2–3 friends willing to playtest | — | Real-transport tests (every gate) need two accounts on two machines; the funny metric needs 4 humans |
+| 6b | Create the STUDIO short-form accounts (TikTok + YouTube + Instagram, same handle) | 30 min | One account per studio, not per game — followers compound across the portfolio (framework/10). Do once, ever |
 
 ## Part 2 — Per game, by phase
 
@@ -90,6 +91,10 @@ the pipeline stalls until you do them.
 
 These repeat forever; agents must batch them, never drip them:
 
+- **Post the week's short-form clips** (Gate 1 → launch only): agent delivers
+  cut specs + captions from the playtest laugh logs; you cut (or approve the
+  pre-cropped file), optionally record a 20 s dev voiceover for Tier A posts,
+  and post to the studio accounts (30–60 min/week, framework/10)
 - **Play a build, answer one specific feel question** (10 min)
 - **Provide evidence**: a screenshot, a log file, a recording, the profiler number (5 min)
 - **Be the second machine** for a transport test, or recruit one (20 min)

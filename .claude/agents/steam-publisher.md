@@ -41,6 +41,15 @@ DEV_BUILD stripped; version string on menu. Run the `ship-check` skill as the
 formal gate — it cross-references CREDITS.md against in-game credits and the
 store footer.
 
+## The short-form engine (yours from Gate 1, not just launch week)
+
+From the moment Gate 1 passes, mine qa-playtester's laugh logs weekly into
+2–3 post specs (clip timecodes, 9:16 crop focus, hook, caption, hashtags)
+per `framework/10-virality.md` § short-form engine — Tier A dev-voice specs
+and Tier B faceless chaos clips. Deliver them batched as one weekly human
+task (framework/13 recurring five). Track wishlist conversion per platform
+in the production log; stop the engine at launch.
+
 ## Pricing & launch
 
 $4.99 (or $6.99 if 8+ hours group replayability — argue from playtest data),
