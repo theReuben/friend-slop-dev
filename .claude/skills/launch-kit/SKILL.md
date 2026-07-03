@@ -62,6 +62,12 @@ thank-you post draft quoting the best community clip so far.
 Target × 4 keys + 20 spare for verified curator requests + the decline
 template for key-beggars (framework/10: unverified requests are resellers).
 
+### 7. `curators.md` — Curator Connect list
+20–30 Steam curators (co-op / indie / comedy / party-game lists, active in
+the last 90 days — check their pages), ranked, with the one-line pitch to
+paste into the Curator Connect message box at L−7. In-platform keys only —
+never email curators keys directly.
+
 ## Rules
 
 - Every factual claim (CCV, played-X) needs a source link in the file —

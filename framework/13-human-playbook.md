@@ -48,6 +48,8 @@ the pipeline stalls until you do them.
 | 14 | Record character vocalization takes | 10–15 min | Agent hands you a numbered list of ~20 noises ("short effort grunt ×3, panicked yelp ×3…"); any mic, quiet room, Audacity, one file per take |
 | 15 | Capture slop-check evidence: screenshots from the 3 angles the agent specifies + 60 s gameplay clip | 15 min | Shot list provided; agent does the actual audit |
 | 16 | Play the slice loop once end-to-end and confirm the restart feel (< 5 s, one input) | 15 min | — |
+| 16b | **Buy the AppId — the $100** — and fill in the store page (Gate 2, yes this early: every live week is wishlist runway for the short-form engine) | 1.5 h | Every word drafted, every asset named to its upload slot, from slice art; you paste, upload, submit for review |
+| 16c | Decide demo / Next Fest with the producer's calendar recommendation (framework/09 decision rule) | 10 min | Producer states whether a Next Fest window aligns and what a ≤ 2-week shift would buy |
 
 ### Phase 3 — Content (your time: ~2–4 h)
 
@@ -68,10 +70,10 @@ the pipeline stalls until you do them.
 
 | # | Action | Time | Agent prep |
 |---|---|---|---|
-| 22 | **Buy the AppId — the $100** (L−30 at the latest) | 10 min | This is the game's entire cash budget; agent reminds you at the right calendar point |
+| 22 | If a demo was decided (#16c): set the demo app live, enroll in Next Fest | 30 min | Demo build cut and verified by agents; you click through the dashboard enrollment |
 | 23 | Capsule art finishing pass in Krita/GIMP if the paintover needs a human hand | 1–2 h | Art-director provides the base render + a precise spec (what to paint, where, which palette colors); skip if the pure render works |
 | 24 | Ask playtesters for permission to use their voice audio in the trailer | 10 min | Agent drafts the message; keep the yes in writing |
-| 25 | **Fill in the Steamworks store page** (L−21): paste drafted copy, upload capsules/screenshots/trailer, set tags, answer content survey + AI disclosure ("none"), submit for review | 1–1.5 h | EVERY word and asset prepared and named to match the upload slots; you are pasting and clicking |
+| 25 | **Refresh the store page to final quality** (page has been live since Gate 2): final capsules, trailer, screenshots, price; at L−7 send Curator Connect keys (prepared list) | 1 h | Final assets named to slots; curator list ranked in the launch kit; you upload and click |
 | 26 | **Upload the build**: `steamcmd` login (Steam Guard MFA is you), run the prepared script; set it live on the beta branch, click through build review submission | 30 min | Depot/app VDF scripts written; one login + one command |
 | 27 | Set price, launch discount, release date in the dashboard | 15 min | Recommendation with reasoning provided; the decision is yours |
 | 28 | **Send streamer outreach from your accounts** (L−5): the DMs/emails, 4 keys each | 1–2 h | Target list (20–40 streamers with why-them notes), personalized drafts, keys generated and grouped |

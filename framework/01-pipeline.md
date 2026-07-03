@@ -51,8 +51,13 @@ tech-artist, audio-designer.
 - Core loop closed: start → play → fail/win → results → play again.
 - First `slop-check` run happens here, on the slice.
 
+- **Store page goes up NOW**: AppId purchased, page drafted from slice art,
+  submitted for review (`09-steam-shipping.md` — early page = wishlist runway
+  for the short-form engine; assets get refreshed at Phase 5 quality later).
+
 **Gate 2:** Two remote machines complete a full loop together with voice.
-Slice screenshots pass slop-check. `CREDITS.md` is complete for every asset used.
+Slice screenshots pass slop-check. `CREDITS.md` is complete for every asset
+used. Store page submitted (live before Phase 3 ends).
 
 ## Phase 3 — Content (2 weeks)
 

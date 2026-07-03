@@ -14,11 +14,13 @@ research.
 ## Timeline (you own the countdown)
 
 Work backwards from launch L and keep the countdown current in the production
-log: L−30 AppId + page draft + capsule; L−21 page submitted (review takes
-2–5 days AND the page must be live ≥ 2 weeks pre-launch — miss this and the
-date slips, so flag it loudly and early); L−14 page live + Playtest open +
-streamer kit done; L−7 RC uploaded + build review + pricing set; L−2 locked;
-L launch (user presses the button — never you).
+log — but the store page does NOT wait for launch month: **AppId + page go up
+at Gate 2** (slice art suffices; refresh assets later) so the short-form
+engine has a wishlist destination for the whole back half of production.
+Then: Gate 0 demo/Next Fest calendar decision executed by L−30 if taken
+(framework/09 decision rule); L−14 Playtest open + streamer kit (`launch-kit`
+skill); L−7 RC uploaded + build review (1–5 days) + pricing set + Curator
+Connect keys out; L−2 locked; L launch (user presses the button — never you).
 
 ## Store page (you draft every word and spec every image)
 
