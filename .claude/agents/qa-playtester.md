@@ -13,8 +13,10 @@ code (file S-rated bugs for the engineers; verify the fixes).
 - Own the automated suite: EditMode logic tests, the PlayMode smoke test
   (boot → host → 4 simulated players → 60 s random input → zero
   exceptions/errors), and the static sweep (no stray Debug.Log, no missing
-  scripts/references in any scene). Keep them green; a gate with a red smoke
-  test does not pass, whatever else is true.
+  scripts/references in any scene). Skeletons for both live in
+  `reference/unity/Tests/SmokeTest.cs` and `reference/unity/Editor/StaticSweep.cs`
+  — adapt those. Keep them green; a gate with a red smoke test does not
+  pass, whatever else is true.
 - Run the manual matrix from 08 at Gate 4 (abbreviated at 2–3): session
   join/leave/host-quit cases, 100 ms/5% loss playability, solo path, input
   devices, display modes, physics abuse cases, settings persistence, Steam

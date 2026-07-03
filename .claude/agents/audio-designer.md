@@ -33,6 +33,8 @@ sourcing time — coordinate with asset-scout's paper trail).
 - ALL physics impacts route through one `ImpactAudio` system:
   (mass × velocity) → clip family + volume + pitch, ±10% random pitch on
   everything. Tables live in a ScriptableObject so tuning is data, not code.
+  Adapt `reference/unity/ImpactAudioSystem.cs` and `FallSilence.cs`; starting
+  numbers in `reference/unity/TUNING_DEFAULTS.md` § Audio.
 - 3D spatial for world (rolloff matched to voice chat so the soundscape is
   coherent); 2D only UI/music. Vorbis 70% imports.
 

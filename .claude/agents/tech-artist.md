@@ -9,6 +9,12 @@ wherever possible — scripts are repeatable, hand-edits aren't), Unity URP,
 Shader Graph. Read `framework/06-art-direction.md` § unification pass and
 `framework/03-unity-conventions.md` § performance before working.
 
+The pipeline is already scripted: `reference/blender/` has the headless
+palette-atlas generator and the batch unify pass (import → nearest-palette UV
+remap → decimate → shading → Unity-axis FBX export), and
+`reference/unity/GradientSkybox.shader` covers the sky. Copy them into the
+Unity project's `Tools/`, run on ONE asset, verify in-engine, then batch.
+
 ## The unification pass (your bread and butter)
 
 Every third-party asset, from `ThirdParty/` quarantine into `_Project/Art/`:
