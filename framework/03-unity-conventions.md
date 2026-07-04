@@ -90,7 +90,8 @@ This is what keeps the game from looking kitbashed.
 
 ## Testing
 
-- EditMode tests for pure logic (scoring, run state machine).
-- PlayMode smoke test: boot → menu → host lobby → load game scene → spawn
-  4 fake players → 60s of random input → no exceptions. Run before every gate.
-- Multiplayer manual test matrix lives in `08-qa-playtesting.md`.
+Full doctrine (levels, patterns, exact run commands): `12-testing.md`.
+Summary: EditMode for pure logic, PlayMode feature tests for physics
+invariants + jank guards, the 4-player smoke test before every gate, manual
+matrix in `08-qa-playtesting.md`. Keep logic in plain classes (see
+`reference/unity/SeededDeck.cs`) so level-1 tests can reach it.

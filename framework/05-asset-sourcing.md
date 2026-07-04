@@ -74,6 +74,17 @@ manifesto rule; a CC0 license does not launder AI output.
    store page "about" section footer all list attributions. Ship-check verifies
    the three match.
 
+## If an infringement claim ever arrives (post-launch)
+
+Don't argue, don't investigate ownership yourself, don't ignore it. Protocol:
+(1) escalate to the user immediately with the claim + the CREDITS.md row +
+the saved license evidence for that asset; (2) default action is REPLACE —
+swap the asset for a scratch-build or alternative and patch within days,
+even if we believe we're right (a $0-asset fight is never worth a store
+strike); (3) the user sends the polite response; (4) log the source as
+rejected in CREDITS.md so no future game re-sources it. This is what the
+license-evidence paper trail exists for.
+
 ## Sourcing strategy notes
 
 - **Pick packs, not pieces.** 90% of a game's art should come from ≤ 3 pack

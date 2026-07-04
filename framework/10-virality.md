@@ -23,12 +23,65 @@ attempt and impossible to achieve if these basics are missed.
 
 - **End-of-run blame card:** superlatives per player (Most Falls, Worst Driver,
   Team Anchor). The single highest ROI virality feature in the genre.
+- **Self-attributing frames:** game name/logo quietly visible on the blame
+  card and the death-cam frame — the two most screenshotted/clipped moments.
+  Every clip that escapes into a group chat or feed then carries its own
+  "what game is this?" answer. Subtle corner placement; never watermark live
+  gameplay.
 - Photo mode lite: freecam + hide-UI key (streamers make thumbnails with it).
 - Steam rich presence + "invite friends" button front-and-center in lobby.
 - Default open-mic proximity voice (with easy opt-out) — the comedy transmits
   by default.
 
-## The streamer kit (steam-publisher builds at L−14)
+## The short-form engine (Reels / TikTok / Shorts — runs Gate 1 → launch)
+
+Short-form is this genre's native discovery channel: a friendslop game IS a
+20-second clip, and titles in our reference class were carried to launch by
+TikTok before Steam's algorithm ever noticed them. But it pays out for
+CONSISTENCY, not for one launch-day dump — so it runs as a program from the
+moment the greybox is funny (Gate 1) until launch, then stops (ship and
+forget applies to content channels too).
+
+**The engine (agents do all prep; human posts):**
+
+1. **Source material is free:** every playtest is already recorded and every
+   laugh already timestamped (framework/08). qa-playtester's laugh log IS the
+   content calendar — steam-publisher mines it weekly into clip specs
+   (file + timecodes + 9:16 crop focus + hook line + caption + hashtags).
+2. **Cadence: 2–3 posts/week from Gate 1.** Below that, the algorithm forgets
+   you; above that, it eats the dev schedule. Human cost ≈ 30–60 min/week
+   (framework/13).
+3. **One account per STUDIO, not per game.** Followers compound across the
+   portfolio — the audience from game #1's clips is game #2's launch pad.
+   This is the strongest cross-game asset the factory builds.
+4. **Two content tiers, use both:**
+   - **Tier A — dev-voice ("I added X to my game and my friends found a way
+     to ruin it"):** 15–30 s, greybox footage is FINE (jank reads as charm
+     mid-development), human records one voiceover take. Highest wishlist
+     conversion format in indie games; 2–4× the performance of raw clips.
+   - **Tier B — faceless chaos clip:** the fail, the scream, one caption
+     line. Near-zero human cost, keeps cadence between Tier A posts.
+5. **Anatomy of a post:** motion in frame 1 (no logo cards, no intros), the
+   fail arc completes by 0:20, real playtest voice audio (permissions on
+   file), caption asks a question or blames a player ("Dave was told about
+   the bridge"), wishlist CTA in caption/comment only — on-screen CTAs kill
+   reach. Cross-post the identical vertical file to TikTok + Shorts + Reels;
+   platform-native re-edits are not worth the time (TikTok/Shorts will
+   outperform Reels for games — post to all three anyway, it's the same file).
+6. **Measure wishlists, not views.** Steam's UTM links per platform in bio.
+   A 500-view clip that converts beats a 100k banger that doesn't; log
+   weekly numbers in the production log and let the next game's pitch cite
+   them.
+
+**Guardrails:** the clip test (framework/02) already forces reel-able
+mechanics at design time — never invert that by adding features FOR the
+feed that don't serve the game (that's scope creep with a ring light).
+No trend-chasing formats that hide gameplay; gameplay is the asset. No paid
+boosting. Same no-astroturf rule as everything else: posts are proudly from
+the dev.
+
+## The streamer kit (steam-publisher builds at L−14 — automated end-to-end
+by the `launch-kit` skill; the human only sends and posts)
 
 A public press-kit page (free: GitHub Pages or itch devlog) containing:
 - 5 curated playtest clips (the funniest fails, with audio), vertical crops too.
@@ -51,11 +104,44 @@ A public press-kit page (free: GitHub Pages or itch devlog) containing:
   time the streamer keys to go out 3–5 days pre-launch with a launch-day
   embargo suggestion (not requirement).
 
-## What we do NOT do
+## Building in public (rides the short-form engine, same material)
 
-- Paid ads, paid influencer deals, PR agencies, convention booths.
+Alongside the vertical clips, 1 devlog-style post per week to the dev/indie
+communities (r/IndieDev, r/Unity3D WIP threads, r/playmygame for playtest
+recruitment — which doubles as marketing). Same source material, landscape
+crops, more "here's how the rope physics broke" framing. Guardrails: respect
+each community's self-promo rules (agent checks them per subreddit before
+drafting), give more than you ask (a real technical write-up outperforms a
+trailer dump), never post the same content to more than 2 places in a week.
+
+## The portfolio flywheel (activates at game #2)
+
+Ship-and-forget applies per game; the STUDIO compounds. Once two games exist:
+- **Steam franchise/creator page** (free) — every launch cross-pollinates the
+  catalog; "more from this studio" gets one button on each main menu (a
+  static image + store link, one hour of work, zero maintenance).
+- **Bundle** the catalog ("complete the set" bundles are free to configure,
+  auto-discount, and resurface old games at every new launch).
+- The studio short-form account (§ above) is the audience half of this
+  flywheel; the franchise page is the storefront half.
+- Each launch's post-mortem numbers tell the next pitch which themes/clips
+  converted — the factory's taste sharpens per iteration.
+
+## What we do NOT do (each rejected for a reason — don't relitigate)
+
+- Paid ads, paid influencer deals, PR agencies, convention booths (cash rule).
 - Discord community server promises (moderation = forever-support; a Steam
   discussions pin is our only official channel).
+- Trading cards / Points Shop items (setup labor + Valve review for
+  near-zero discovery value at our scale).
+- Long-form press releases / games-media outreach (tiny indies get coverage
+  FROM virality, not before it; the launch-kit factsheet serves any press
+  inquiry that arrives).
+- ARGs, stunts, fake beef, engagement-bait controversies (time sinks that
+  can backfire onto the store page).
+- In-game clip-recording/replay systems (a real feature, but a scope trap —
+  OBS and Steam's own recording exist; our job is making moments WORTH
+  clipping, and self-attributing frames make them findable).
 - Fake hype: no botted wishlists, no astroturfed posts, no review begging
   in-game (a single polite "enjoying it? a review helps a tiny team" on the
   exit screen after 2+ hours played is acceptable and standard).

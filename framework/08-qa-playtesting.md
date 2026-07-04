@@ -1,7 +1,9 @@
 # 08 — QA & playtesting: "is it funny" is a test criterion
 
 Two QA tracks run in parallel: **does it break** (bugs) and **does it land**
-(comedy/feel). The qa-playtester agent owns both.
+(comedy/feel). The qa-playtester agent owns both. This doc is the PROCESS
+(what to test, severity policy, human logistics); the testing LEVELS, code
+patterns, and exact run commands live in `12-testing.md`.
 
 ## Track 1 — Does it break
 

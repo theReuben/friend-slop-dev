@@ -13,14 +13,49 @@ because Steam's process punishes improvisation with review delays.
 
 ## Timeline (work backwards from launch day L)
 
+**The page goes live as EARLY as possible, not at the deadline.** The
+short-form engine (10-virality.md) starts converting viewers at Gate 1 —
+every week without a live "Coming Soon" page is wishlist runway burned.
+2 weeks pre-launch is Steam's minimum, not our target.
+
 | When | What |
 |---|---|
-| L−30 | AppId purchased; store page drafted; capsule art done |
-| L−21 | **Store page submitted for review** (2–5 business days review + Steam requires the page live ("Coming Soon") ≥ 2 weeks before launch) |
-| L−14 | Page live; Steam Playtest opened; streamer kit ready (10-virality.md) |
-| L−7 | Release candidate build uploaded; **build review** requested (1–5 days); price + launch discount set |
+| Gate 2 (≈ week 4) | **AppId purchased; store page drafted and submitted** — slice art provides capsule + screenshots (they can be refreshed later) |
+| Gate 2 + review time | **Page LIVE ("Coming Soon")** — short-form UTM links now have a destination; wishlists accumulate for the whole back half of production |
+| L−30 | Demo decision executed if taken (see below); capsule art final |
+| L−14 | Steam Playtest opened; streamer kit ready (`launch-kit` skill) |
+| L−7 | Release candidate uploaded; **build review** requested (1–5 days); price + launch discount set; Curator Connect keys out |
 | L−2 | Build approved; release date locked; trailer final |
 | L | User presses release. Launch discount active (10–20%) |
+
+## Demo & Steam Next Fest (the biggest free lever we can point at)
+
+Steam **Next Fest** (three editions/year: Feb, June, Oct) is the single
+largest free wishlist event available to an indie — and a friendslop demo is
+cheap to cut: the first leg/biome, 20–30 min, fully multiplayer (a co-op demo
+that friends play together converts the whole group).
+
+- **Decision rule (producer + user, at Gate 0 when the calendar is set):**
+  if a Next Fest window lands in L−90..L−14, take it — shifting launch by
+  ≤ 2 weeks to align is a worthwhile trade and the ONE sanctioned reason to
+  adjust the time-box calendar. If nothing aligns, skip; never delay a
+  finished game a month+ for a festival.
+- Demo mechanics: separate free demo app (no extra fee), content-capped, ends
+  on the wishlist screen. Cut it from the Gate 3 build in ≤ 2 days — a demo
+  needing more work than that is a scope failure.
+- One Next Fest per app, pre-launch only, page must be live well before —
+  another reason the page goes up at Gate 2.
+- Leave the demo up post-launch (it keeps converting; zero maintenance).
+
+## Free platform levers (all near-zero labor — take them)
+
+- **Curator Connect:** at L−7 send keys through the dashboard to 20–30
+  relevant curators (co-op/indie/comedy lists; `launch-kit` prepares the
+  list). Free, in-platform, no key-reseller risk.
+- **Seasonal sales:** opt into Steam's auto-enrollment for seasonal events at
+  a standard 10–20% discount post-launch. Zero labor, recurring visibility.
+- **Franchise/creator page** once game #2 exists (see 10-virality.md
+  § portfolio flywheel).
 
 ## Store page checklist
 
@@ -68,6 +103,19 @@ $4.99 default; $6.99 if content clears 8+ hours of group replayability; never
 higher (the 4-pack impulse math is the business model). Launch discount 10–20%.
 No regional price overrides beyond Steam's auto-suggestions. Never free —
 free attracts a support burden that violates ship-and-forget.
+
+## If it blows up (the good emergency)
+
+Ship-and-forget is a floor, not a cage. If a game finds real traction
+(sustained top-seller placement, six-figure units), the USER may extend the
+patch window — but three rules hold even then: never publicly promise a
+roadmap (silence preserves options; promises create the support burden we
+exist to avoid), price stays put (no greedy mid-spike increases; goodwill IS
+the marketing), and a sequel/expansion is a NEW game through Phase 0 like any
+other — success does not exempt it from the novelty check against its own
+predecessor. Store-page-only localization (short description in top store
+languages) is the one cheap post-hoc growth lever worth taking; in-game stays
+English/near-zero-text per framework/02.
 
 ## Post-launch window (2 weeks, then stop — manifesto rule)
 

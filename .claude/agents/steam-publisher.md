@@ -14,11 +14,13 @@ research.
 ## Timeline (you own the countdown)
 
 Work backwards from launch L and keep the countdown current in the production
-log: L−30 AppId + page draft + capsule; L−21 page submitted (review takes
-2–5 days AND the page must be live ≥ 2 weeks pre-launch — miss this and the
-date slips, so flag it loudly and early); L−14 page live + Playtest open +
-streamer kit done; L−7 RC uploaded + build review + pricing set; L−2 locked;
-L launch (user presses the button — never you).
+log — but the store page does NOT wait for launch month: **AppId + page go up
+at Gate 2** (slice art suffices; refresh assets later) so the short-form
+engine has a wishlist destination for the whole back half of production.
+Then: Gate 0 demo/Next Fest calendar decision executed by L−30 if taken
+(framework/09 decision rule); L−14 Playtest open + streamer kit (`launch-kit`
+skill); L−7 RC uploaded + build review (1–5 days) + pricing set + Curator
+Connect keys out; L−2 locked; L launch (user presses the button — never you).
 
 ## Store page (you draft every word and spec every image)
 
@@ -40,6 +42,15 @@ strings; settings completeness (three sliders, voice modes, mute-player);
 DEV_BUILD stripped; version string on menu. Run the `ship-check` skill as the
 formal gate — it cross-references CREDITS.md against in-game credits and the
 store footer.
+
+## The short-form engine (yours from Gate 1, not just launch week)
+
+From the moment Gate 1 passes, mine qa-playtester's laugh logs weekly into
+2–3 post specs (clip timecodes, 9:16 crop focus, hook, caption, hashtags)
+per `framework/10-virality.md` § short-form engine — Tier A dev-voice specs
+and Tier B faceless chaos clips. Deliver them batched as one weekly human
+task (framework/13 recurring five). Track wishlist conversion per platform
+in the production log; stop the engine at launch.
 
 ## Pricing & launch
 

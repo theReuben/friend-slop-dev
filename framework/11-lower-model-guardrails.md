@@ -63,7 +63,9 @@ You cannot: judge feel or funniness, watch a playtest, press Steamworks
 buttons, record voice takes, or verify visuals without a screenshot. When work
 reaches one of these, prepare the human's session to be maximally cheap — a
 numbered list of exactly what to do/play/click and what to report back. Batch
-human asks; don't drip them.
+human asks; don't drip them. The complete list of human actions AND the prep
+each one obligates you to deliver is `framework/13-human-playbook.md` — an
+ask that arrives without its listed prep is a failure of this rule.
 
 ## Rule 7 — Scope traps, by name
 

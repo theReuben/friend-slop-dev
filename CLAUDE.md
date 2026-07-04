@@ -13,6 +13,7 @@ one step forward through the pipeline.
 | "find assets for X" | Run the `asset-hunt` skill (delegates to `asset-scout`) |
 | "does this look like AI slop?" / visual review | Run the `slop-check` skill |
 | "are we ready to ship?" / release | Run the `ship-check` skill |
+| "prepare the launch" / marketing | Run the `launch-kit` skill (Phase 5, L−14) |
 | Anything about a game in production | Read `games/<name>/PRODUCTION_LOG.md` first, then act as the **producer** agent (`.claude/agents/producer.md`) |
 | Changing the factory itself | Edit `framework/` docs directly; keep them prescriptive and short |
 
@@ -39,11 +40,13 @@ one step forward through the pipeline.
 
 ## Where things are
 
-- Doctrine and playbooks: `framework/00-manifesto.md` through `framework/11-lower-model-guardrails.md`.
-  Read `00`, `01`, and `02` before doing any design work; read `11` before any
-  engineering work (it lists the known gotchas and the stuck protocol). Read
-  the topic doc before doing specialist work (e.g. `04-netcode.md` before
-  touching networking).
+- Doctrine and playbooks: `framework/00-manifesto.md` through `framework/13-human-playbook.md`.
+  Read `00`, `01`, and `02` before doing any design work; read `11` (gotchas,
+  stuck protocol) and `12` (testing levels + run commands) before any
+  engineering work. Read the topic doc before doing specialist work (e.g.
+  `04-netcode.md` before touching networking). When queuing work for the
+  human, `13-human-playbook.md` defines what they do and what YOU must have
+  prepared first.
 - Canonical code: `reference/unity/` (character motor, grabbing, ragdoll,
   voice chat, impact audio, run manager, tests) and `reference/blender/`
   (palette-atlas unification pipeline). **Adapt these — never rewrite these

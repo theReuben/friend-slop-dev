@@ -40,7 +40,10 @@ the game's, wire the serialized fields, and re-verify third-party API calls.
 | `unity/VoiceOcclusion.cs` | Raycast low-pass on voice |
 | `unity/RunManager.cs` | Host-authoritative run state machine skeleton |
 | `unity/Editor/StaticSweep.cs` | Missing-script / missing-reference scanner (QA static sweep) |
-| `unity/Tests/SmokeTest.cs` | The PlayMode smoke test skeleton |
+| `unity/SeededDeck.cs` | Deterministic deck for escalation systems — the "pure logic in plain classes" shape |
+| `unity/Tests/EditMode/SeededDeckTests.cs` | The level-1 test pattern: pure logic, determinism invariants |
+| `unity/Tests/PlayMode/GrabBreakTest.cs` | The level-2 pattern: programmatic physics-invariant test / jank-guard shape |
+| `unity/Tests/PlayMode/SmokeTest.cs` | The level-3 smoke test skeleton |
 | `unity/GradientSkybox.shader` | Palette gradient sky (kills slop tell #1) |
 | `unity/syntax_check.py` | tree-sitter C# parse check — the compile-adjacent verification available without Unity |
 | `unity/TUNING_DEFAULTS.md` | Starting values for every feel tunable |
